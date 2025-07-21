@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import {Navbar} from './components/Navbar';
+import {CartModal} from './components/CartModal'
 
-import {CartModal} from './components/CartModal';
 import ProductList from './components/ProductList';
-
 
 export default function App() {
   const [cartItems, setCartItems] = useState([]);
