@@ -1,8 +1,8 @@
-// App.jsx
 import React, { useState } from 'react';
 import {Navbar} from './components/Navbar';
-import {ProductList} from './components/ProductList';
+
 import {CartModal} from './components/CartModal';
+import ProductList from './components/ProductList';
 
 
 export default function App() {

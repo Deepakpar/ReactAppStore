@@ -11,15 +11,16 @@ export default function ProductList({ onAddToCart }) {
   }, []);
 
   return (
-   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          product={product}
-          onAddToCart={onAddToCart}
-        />
-      ))}
-    </div>
+   <div className="product-grid">
+  {products.map((product) => (
+    <ProductCard
+      key={product.id}
+      product={product}
+      onAddToCart={onAddToCart}
+    />
+  ))}
+</div>
+
   );
 }
 
