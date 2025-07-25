@@ -3,10 +3,13 @@ import {Navbar} from './components/Navbar';
 import {CartModal} from './components/CartModal'
 
 import ProductList from './components/ProductList';
+import { createBrowserRouter, Outlet, RouterProvider, useOutletContext } from 'react-router-dom';
+
+
 
 export default function App() {
-  const [cartItems, setCartItems] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  const { cartItems, setCartItems } = useOutletContext();
 
   const handleAddToCart = (product) => {
     const exists = cartItems.find(item => item.id === product.id);
@@ -17,22 +20,11 @@ export default function App() {
     }
   };
 
-  const handleRemoveFromCart = (productId) => {
-    setCartItems(cartItems.filter(item => item.id !== productId));
-  };
-
   return (
-    <div className="min-h-screen bg-gray-100">
-      <Navbar cartCount={cartItems.length} onCartClick={() => setIsModalOpen(true)} />
+
+    
+    <div className="p-4">
       <ProductList onAddToCart={handleAddToCart} />
-      {isModalOpen && (
-        <CartModal 
-          isOpen={isModalOpen} 
-          onClose={() => setIsModalOpen(false)} 
-          cartItems={cartItems} 
-          onRemoveFromCart={handleRemoveFromCart} 
-        />
-      )}
     </div>
   );
 }

@@ -51,8 +51,6 @@ body {
   background-color: #218838;
 }
 
-
-/* styles.css */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -125,3 +123,75 @@ body {
   align-items: center;
   gap: 10px;
 }
+
+/* src/pages/CartPage.css */
+
+.cart-container {
+  padding: 24px;
+}
+
+.cart-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.cart-empty {
+  font-size: 16px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.cart-item-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-item-img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.cart-item-info h3 {
+  font-weight: 600;
+}
+
+.cart-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-actions button {
+  padding: 4px 8px;
+}
+
+.cart-remove {
+  color: red;
+  margin-left: 16px;
+}
+
+.cart-summary {
+  margin-top: 24px;
+  text-align: right;
+}
+
+.total {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.discounted {
+  font-size: 16px;
+  color: green;
+}
+

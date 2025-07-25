@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 export default function CartModal({ isOpen, onClose, cartItems, onRemoveFromCart }) {
@@ -28,6 +29,12 @@ export default function CartModal({ isOpen, onClose, cartItems, onRemoveFromCart
             ))}
           </ul>
         )}
+
+         <Link to="/cart">
+          <button onClick={onClose} className="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+            Go to Cart Page
+          </button>
+        </Link>
       </div>
     </div>
   );
